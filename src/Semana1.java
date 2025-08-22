@@ -22,7 +22,7 @@ public class Semana1 {
         }
         
         void showBalance () {
-            System.out.println("Balance actual: " + balance);
+            System.out.println(owner + ", su balance actual: " + balance);
         }
     }
     public static void main(String[] args) {
@@ -37,5 +37,6 @@ public class Semana1 {
 
         account1.deposit(500);
         account1.withdraw(200); 
+        account1.showBalance();
     }
-}
+}       
