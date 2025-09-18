@@ -1,13 +1,13 @@
 package semanaTres.company.main;
 
-import semanaTres.company.hr.employee;
+import semanaTres.company.hr.Employee;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void Main(String[] args) {
         System.out.println("=== Employee Management System ===\n");
 
-        employee employee1 = new employee();
-        employee employee2 = new employee();
+        Employee employee1 = new Employee();
+        Employee employee2 = new Employee();
 
         employee1.name = "John Smith";
         employee1.setRole("Software Developer");

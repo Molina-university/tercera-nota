@@ -1,17 +1,17 @@
 package semanaTres.company.hr;
 
-public class employee {
+public class Employee {
     public String name;
     private double salary;
     protected String role;
 
-    public employee() {
+    public Employee() {
         this.name = "";
         this.salary = 0.0;
         this.role = "";
     }
 
-    public employee(String name, double salary, String role) {
+    public Employee(String name, double salary, String role) {
         this.name = name;
         setSalary(salary); 
         this.role = role;
