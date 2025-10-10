@@ -3,7 +3,7 @@ package semanaTres.company.main;
 import semanaTres.company.hr.Employee;
 
 public class Main {
-    public static void Main(String[] args) {
+    public static void main(String[] args) { // <-- Cambia 'Main' por 'main'
         System.out.println("=== Employee Management System ===\n");
 
         Employee employee1 = new Employee();
