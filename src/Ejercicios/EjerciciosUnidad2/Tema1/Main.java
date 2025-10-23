@@ -3,7 +3,6 @@ import Ejercicios.EjerciciosUnidad2.Tema1.utils.Package;
 
 public class Main {
     
-    // Bonus: Method that receives a Package object and changes its weight
     public static void changeWeight(Package p, double newWeight) {
         p.setWeight(newWeight);
         System.out.println("\n[Inside changeWeight method]");
@@ -13,28 +12,23 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("=== PACKAGE DELIVERY SYSTEM - TESTING OBJECT REFERENCES ===\n");
         
-        // Step 1: Create a Package object
         Package p1 = new Package("TRK-12345", 5.5);
         System.out.println("1. Created package p1:");
         p1.showPackage();
         
-        // Step 2: Create another reference pointing to the same object
         Package p2 = p1;
         System.out.println("\n2. Created reference p2 = p1");
         System.out.println("   p2 now points to the same object as p1");
         
-        // Step 3: Change weight using p2
         System.out.println("\n3. Changing weight to 8.3 kg using p2...");
         p2.setWeight(8.3);
         
-        // Step 4: Show both references
         System.out.println("\n4. Displaying both references:");
         System.out.print("   p1: ");
         p1.showPackage();
         System.out.print("   p2: ");
         p2.showPackage();
         
-        // Explanation
         System.out.println("\n" + "=".repeat(60));
         System.out.println("EXPLANATION:");
         System.out.println("=".repeat(60));
@@ -46,7 +40,6 @@ public class Main {
         System.out.println("• Think of it as two remote controls (p1, p2) for the same TV");
         System.out.println("=".repeat(60));
         
-        // BONUS: Testing method parameter passing
         System.out.println("\n=== BONUS: TESTING METHOD PARAMETER PASSING ===\n");
         
         Package p3 = new Package("TRK-67890", 3.2);

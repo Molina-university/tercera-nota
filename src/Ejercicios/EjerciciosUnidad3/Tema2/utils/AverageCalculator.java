@@ -1,18 +1,13 @@
 package Ejercicios.EjerciciosUnidad3.Tema2.utils;
 
 public class AverageCalculator {
-// AverageCalculator class to handle mathematical operations
-
-    
-    // Method to calculate average with zero division check
-    public double calculate(int total, int count) throws ArithmeticException {
+        public double calculate(int total, int count) throws ArithmeticException {
         System.out.println("\n╔════════════════════════════════════════════════════════╗");
         System.out.println("║           CALCULATING AVERAGE                          ║");
         System.out.println("╚════════════════════════════════════════════════════════╝");
         System.out.printf("  Total: %d\n", total);
         System.out.printf("  Count: %d\n", count);
         
-        // Check for division by zero BEFORE attempting division
         if (count == 0) {
             System.out.println("  Status: ✗ Error");
             throw new ArithmeticException("Cannot calculate average: count is zero (division by zero)!");
@@ -25,7 +20,6 @@ public class AverageCalculator {
         return average;
     }
     
-    // Method to calculate average from array
     public double calculateFromArray(int[] numbers) throws ArithmeticException {
         if (numbers == null || numbers.length == 0) {
             throw new ArithmeticException("Cannot calculate average: no numbers provided!");
@@ -39,7 +33,6 @@ public class AverageCalculator {
         return calculate(total, numbers.length);
     }
     
-    // Method to find statistics
     public void showStatistics(int[] numbers) {
         System.out.println("\n╔════════════════════════════════════════════════════════╗");
         System.out.println("║              DATA STATISTICS                           ║");

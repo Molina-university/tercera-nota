@@ -9,10 +9,8 @@ public class Main {
         System.out.println("║         CAR RENTAL MANAGEMENT SYSTEM v1.0                ║");
         System.out.println("╚══════════════════════════════════════════════════════════╝");
         
-        // Create CarRental system
         CarRental rental = new CarRental();
         
-        // Step 1: Add cars to the system
         System.out.println("\n[ STEP 1: ADDING CARS TO FLEET ]");
         System.out.println("─".repeat(60));
         rental.addCar(new Car("Toyota Corolla 2024", 45.00, true));
@@ -23,34 +21,28 @@ public class Main {
         rental.addCar(new Car("Mercedes-Benz C-Class", 130.00, true));
         rental.addCar(new Car("Chevrolet Malibu", 48.00, false)); // Already rented
         
-        // Step 2: Show all cars
         System.out.println("\n[ STEP 2: DISPLAYING ALL CARS ]");
         System.out.println("─".repeat(60));
         rental.showAllCars();
         
-        // Step 3: Show only available cars
         System.out.println("\n[ STEP 3: DISPLAYING AVAILABLE CARS ]");
         System.out.println("─".repeat(60));
         rental.showAvailableCars();
         
-        // Step 4: Simulate a rental - Search and rent
         System.out.println("\n\n[ STEP 4: SIMULATING CAR RENTAL ]");
         System.out.println("─".repeat(60));
         
-        // First rental
         Car foundCar = rental.searchCar("Honda Civic 2024");
         if (foundCar != null) {
             rental.calculateTotal(foundCar, 5);
         }
         
-        // Second rental
         System.out.println("\n" + "─".repeat(60));
         Car mustang = rental.searchCar("Ford Mustang GT");
         if (mustang != null) {
             rental.calculateTotal(mustang, 3);
         }
         
-        // Step 5: Try to rent an already rented car
         System.out.println("\n\n[ STEP 5: ATTEMPTING TO RENT UNAVAILABLE CAR ]");
         System.out.println("─".repeat(60));
         Car tesla = rental.searchCar("Tesla Model 3");
@@ -58,12 +50,10 @@ public class Main {
             rental.calculateTotal(tesla, 7);
         }
         
-        // Step 6: Show updated available cars
         System.out.println("\n\n[ STEP 6: UPDATED AVAILABLE CARS ]");
         System.out.println("─".repeat(60));
         rental.showAvailableCars();
         
-        // BONUS: Search for non-existent car
         System.out.println("\n\n[ BONUS: SEARCHING FOR NON-EXISTENT CAR ]");
         System.out.println("─".repeat(60));
         Car notFound = rental.searchCar("Lamborghini Aventador");
@@ -71,7 +61,6 @@ public class Main {
             System.out.println("  Suggestion: Please check available models.");
         }
         
-        // Final Statistics
         System.out.println("\n\n╔══════════════════════════════════════════════════════════╗");
         System.out.println("║                   SYSTEM STATISTICS                      ║");
         System.out.println("╚══════════════════════════════════════════════════════════╝");

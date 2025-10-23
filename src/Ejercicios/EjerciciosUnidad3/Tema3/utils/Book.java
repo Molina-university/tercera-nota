@@ -5,14 +5,12 @@ public class Book {
     private String author;
     private double price;
     
-    // Constructor
     public Book(String title, String author, double price) {
         this.title = title;
         this.author = author;
         this.price = price;
     }
     
-    // Getters
     public String getTitle() {
         return title;
     }
@@ -25,13 +23,10 @@ public class Book {
         return price;
     }
     
-    // Method to format book as string for file storage
     public String toFileFormat() {
-        // Format: title|author|price
         return title + "|" + author + "|" + price;
     }
     
-    // Static method to create Book from file format
     public static Book fromFileFormat(String line) {
         String[] parts = line.split("\\|");
         if (parts.length != 3) {
@@ -43,7 +38,6 @@ public class Book {
         return new Book(title, author, price);
     }
     
-    // Display book information
     public void display() {
         System.out.printf("  📖 %-40s | by %-25s | $%.2f\n", title, author, price);
     }

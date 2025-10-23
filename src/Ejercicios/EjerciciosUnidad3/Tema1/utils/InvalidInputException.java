@@ -1,6 +1,5 @@
 package Ejercicios.EjerciciosUnidad3.Tema1.utils;
 
-// Custom exception for invalid input (negative numbers)
 public class InvalidInputException extends Exception {
     public InvalidInputException() {
         super();

@@ -11,7 +11,6 @@ public class Main {
         
         SafeCalculator calculator = new SafeCalculator();
         
-        // TEST 1: Normal division (SUCCESS)
         System.out.println("\n[ TEST 1: NORMAL DIVISION ]");
         System.out.println("─".repeat(60));
         try {
@@ -21,7 +20,6 @@ public class Main {
             System.out.println("Caught in main: " + e.getMessage());
         }
         
-        // TEST 2: Division by zero (ArithmeticException)
         System.out.println("\n\n[ TEST 2: DIVISION BY ZERO ]");
         System.out.println("─".repeat(60));
         try {
@@ -31,7 +29,6 @@ public class Main {
             System.out.println("Caught in main: " + e.getMessage());
         }
         
-        // TEST 3: Negative dividend (InvalidInputException)
         System.out.println("\n\n[ TEST 3: NEGATIVE DIVIDEND ]");
         System.out.println("─".repeat(60));
         try {
@@ -42,7 +39,6 @@ public class Main {
             System.out.println("   " + e.getMessage());
         }
         
-        // TEST 4: Negative divisor (InvalidInputException)
         System.out.println("\n\n[ TEST 4: NEGATIVE DIVISOR ]");
         System.out.println("─".repeat(60));
         try {
@@ -53,7 +49,6 @@ public class Main {
             System.out.println("   " + e.getMessage());
         }
         
-        // TEST 5: Both negative (InvalidInputException)
         System.out.println("\n\n[ TEST 5: BOTH NUMBERS NEGATIVE ]");
         System.out.println("─".repeat(60));
         try {
@@ -64,7 +59,6 @@ public class Main {
             System.out.println("   " + e.getMessage());
         }
         
-        // TEST 6: Large numbers (SUCCESS)
         System.out.println("\n\n[ TEST 6: LARGE NUMBERS ]");
         System.out.println("─".repeat(60));
         try {
@@ -74,17 +68,14 @@ public class Main {
             System.out.println("Caught in main: " + e.getMessage());
         }
         
-        // TEST 7: Multiple operations with valid numbers
         System.out.println("\n\n[ TEST 7: MULTIPLE OPERATIONS - VALID ]");
         System.out.println("─".repeat(60));
         calculator.performMultipleOperations(50, 10);
         
-        // TEST 8: Multiple operations with division by zero
         System.out.println("\n\n[ TEST 8: MULTIPLE OPERATIONS - DIVISION BY ZERO ]");
         System.out.println("─".repeat(60));
         calculator.performMultipleOperations(30, 0);
         
-        // TEST 9: Multiple operations with negative numbers
         System.out.println("\n\n[ TEST 9: MULTIPLE OPERATIONS - NEGATIVE NUMBERS ]");
         System.out.println("─".repeat(60));
         calculator.performMultipleOperations(-15, 3);

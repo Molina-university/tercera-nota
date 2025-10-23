@@ -6,7 +6,6 @@ public class Producto {
     private double precio;
     private int cantidad;
     
-    // Constructor
     public Producto(String nombre, double precio, int cantidad) {
         this.nombre = nombre;
         this.precio = precio;
@@ -37,7 +36,6 @@ public class Producto {
         return cantidad;
     }
     
-    // Método para vender productos
     public void vender(int cantidad) {
         if (cantidad <= 0) {
             System.out.println("❌ La cantidad a vender debe ser mayor a 0");
@@ -57,7 +55,6 @@ public class Producto {
         }
     }
     
-    // Método para reabastecer stock
     public void reabastecer(int cantidad) {
         if (cantidad <= 0) {
             System.out.println("⚠️ La cantidad a reabastecer debe ser mayor a 0");
@@ -70,7 +67,6 @@ public class Producto {
         System.out.println("   Nuevo stock: " + this.cantidad + " unidades");
     }
     
-    // Método para mostrar información del producto
     public void mostrarProducto() {
         System.out.println("\n═══════════════════════════════════════");
         System.out.println("📦 INFORMACIÓN DEL PRODUCTO");
@@ -79,7 +75,6 @@ public class Producto {
         System.out.println("Precio:   $" + String.format("%.2f", precio));
         System.out.println("Stock:    " + cantidad + " unidades");
         
-        // Indicador de estado del stock
         if (cantidad == 0) {
             System.out.println("Estado:   🔴 AGOTADO");
         } else if (cantidad < 10) {

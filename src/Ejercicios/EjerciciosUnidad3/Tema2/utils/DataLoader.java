@@ -6,7 +6,6 @@ import java.io.IOException;
 
 public class DataLoader {
     
-    // Method to load file - throws IOException
     public String loadFile(String filename) throws IOException, EmptyFileException {
         System.out.println("\n╔════════════════════════════════════════════════════════╗");
         System.out.println("║              LOADING FILE                              ║");
@@ -18,7 +17,6 @@ public class DataLoader {
         StringBuilder content = new StringBuilder();
         
         try {
-            // Attempt to open the file
             fileReader = new FileReader(filename);
             bufferedReader = new BufferedReader(fileReader);
             
@@ -27,13 +25,11 @@ public class DataLoader {
             String line;
             int lineCount = 0;
             
-            // Read file line by line
             while ((line = bufferedReader.readLine()) != null) {
                 content.append(line).append("\n");
                 lineCount++;
             }
             
-            // BONUS: Check if file is empty
             if (lineCount == 0) {
                 throw new EmptyFileException("File '" + filename + "' is empty! No data to process.");
             }
@@ -44,7 +40,6 @@ public class DataLoader {
             return content.toString();
             
         } finally {
-            // Always close resources (even if exception occurs)
             try {
                 if (bufferedReader != null) {
                     bufferedReader.close();
@@ -59,7 +54,6 @@ public class DataLoader {
         }
     }
     
-    // Method to simulate loading data and return array of numbers
     public int[] loadNumbersFromFile(String filename) throws IOException, EmptyFileException, InvalidDataFormatException {
         String content = loadFile(filename);
         String[] lines = content.trim().split("\n");

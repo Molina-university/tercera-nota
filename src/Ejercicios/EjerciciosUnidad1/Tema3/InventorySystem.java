@@ -9,15 +9,12 @@ class InventorySystem {
         System.out.println("📝 CREACIÓN DE PRODUCTOS CON DIFERENTES CONSTRUCTORES:");
         System.out.println("─────────────────────────────────────");
         
-        // Constructor sin parámetros
         Product product1 = new Product();
         System.out.println("✓ Producto 1: Constructor vacío");
         
-        // Constructor con nombre y precio
         Product product2 = new Product("Teclado Mecánico", 89.99);
         System.out.println("✓ Producto 2: Constructor con nombre y precio");
         
-        // Constructor completo
         Product product3 = new Product("Monitor LG 27\"", 299.99, 15);
         System.out.println("✓ Producto 3: Constructor completo");
         
@@ -26,7 +23,7 @@ class InventorySystem {
         product2.showProduct();
         product3.showProduct();
         
-        System.out.println("\n\n🔄 PRUEBAS DE SOBRECARGA DE MÉTODOS (BONUS):");
+        System.out.println("\n\n🔄 PRUEBAS DE SOBRECARGA DE MÉTODOS:");
         System.out.println("─────────────────────────────────────");
         
         System.out.println("\n1️⃣ Actualizar solo nombre:");

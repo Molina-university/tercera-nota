@@ -7,12 +7,10 @@ import java.util.List;
 public class BookFileHandler {
     private String filename;
     
-    // Constructor
     public BookFileHandler(String filename) {
         this.filename = filename;
     }
     
-    // Method to save books to file using BufferedWriter
     public void saveBooks(List<Book> books) {
         System.out.println("\n╔════════════════════════════════════════════════════════╗");
         System.out.println("║              SAVING BOOKS TO FILE                      ║");
@@ -20,15 +18,13 @@ public class BookFileHandler {
         System.out.println("  Filename: " + filename);
         System.out.println("  Books to save: " + books.size());
         
-        // BONUS: Using try-with-resources (automatically closes resources)
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
             
             System.out.println("\n  Writing books:");
             
-            // Write each book to file
             for (Book book : books) {
                 writer.write(book.toFileFormat());
-                writer.newLine(); // Add new line after each book
+                writer.newLine(); 
                 System.out.println("  ✓ " + book.toString());
             }
             
@@ -40,13 +36,11 @@ public class BookFileHandler {
             System.out.println("     Cause: Problem writing to the file");
             
         } finally {
-            // BONUS: Always executes
             System.out.println("  " + "─".repeat(52));
             System.out.println("  ► Save operation finished.");
         }
     }
     
-    // Method to read books from file using BufferedReader
     public List<Book> readBooks() {
         System.out.println("\n╔════════════════════════════════════════════════════════╗");
         System.out.println("║              READING BOOKS FROM FILE                   ║");
@@ -55,7 +49,6 @@ public class BookFileHandler {
         
         List<Book> books = new ArrayList<>();
         
-        // BONUS: Using try-with-resources
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             
             String line;
@@ -64,7 +57,6 @@ public class BookFileHandler {
             System.out.println("\n  Reading books:");
             System.out.println("  " + "─".repeat(52));
             
-            // Read file line by line
             while ((line = reader.readLine()) != null) {
                 lineNumber++;
                 
@@ -91,7 +83,6 @@ public class BookFileHandler {
             System.out.println("     Message: " + e.getMessage());
             
         } finally {
-            // BONUS: Always executes
             System.out.println("  " + "─".repeat(52));
             System.out.println("  ► Read operation finished.");
         }
@@ -99,7 +90,6 @@ public class BookFileHandler {
         return books;
     }
     
-    // Additional method to display all books with formatting
     public void displayBooks() {
         List<Book> books = readBooks();
         
@@ -121,13 +111,11 @@ public class BookFileHandler {
         }
     }
     
-    // Method to check if file exists
     public boolean fileExists() {
         File file = new File(filename);
         return file.exists();
     }
     
-    // Method to delete the file
     public void deleteFile() {
         try {
             File file = new File(filename);

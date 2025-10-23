@@ -5,21 +5,18 @@ public class Product {
     private double price;
     private int quantity;
     
-    // Constructor sin parámetros (valores por defecto)
     public Product() {
         this.name = "Producto sin nombre";
         this.price = 0.0;
         this.quantity = 0;
     }
     
-    // Constructor con nombre y precio
     public Product(String name, double price) {
         this.name = name;
         this.price = price;
         this.quantity = 0;
     }
     
-    // Constructor con nombre, precio y cantidad
     public Product(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
@@ -48,7 +45,6 @@ public class Product {
         System.out.println("═══════════════════════════════════════");
     }
     
-    // BONUS: Sobrecarga del método update
     public void update(String name) {
         this.name = name;
         System.out.println("✅ Nombre actualizado a: " + name);
