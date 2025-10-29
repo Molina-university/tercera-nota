@@ -25,3 +25,18 @@ tarea:
                     -moto.java
                     -vehiculo.java
 bonus: ir a biblioteca y sacar libros que tengan que ver con herencia
+
+
+https://star-saver-473.notion.site/Superclases-y-Subclases-Relaci-n-es-un-295a0cdf497e80099682d5a3b77ccd97?pvs=74
+unidad4
+
+estructura/
+├── src/
+│   └── main/
+│       └── java/
+│           ├── models/
+│           │   ├── Vehiculo.java
+│           │   ├── Carro.java
+│           │   └── Moto.java
+│           └── App.java
+
